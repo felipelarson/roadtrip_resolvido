@@ -1,0 +1,176 @@
+/*----- Reset -----*/
+
+html{height: 100px;}
+img {max-width: 100%; display: block;}
+*{box-sizing: border-box;}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,figure{margin: 0; padding:0}
+
+
+/* -- Varáveis --*/
+
+:root{
+
+	/* Tipografia */
+
+	--serif-font: 'Pacifico', serif;
+	--sans-serif-font: 'Lato', sans-serif;
+	--normal-font-size: 16px;
+	--big-font-size: 2rem;
+	--small-font-size: 14px;
+
+
+	/* Box Model */
+
+	--spacer: 30px;
+	--spacer-2x: calc(var(--spacer)*2);
+
+}
+
+
+
+
+/* Gerais */
+
+body {
+
+	font-family: var(--sans-serif-font);
+	font-size: var(--normal-font-size);
+	line-height: 1.7;
+}
+
+h1 {
+	color: #fff;
+	font-size: 4vw;
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.2;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 14px;
+
+}
+
+/* Header */
+
+header {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+.logo {
+	font-family: var(--serif-font);
+	font-size: 60px;
+	margin-top: var(--spacer);
+}
+
+nav ul {
+	display: flex;
+	list-style:none;
+	justify-content: center;
+	text-align: center;
+}
+
+nav ul li {
+	margin: 10px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	transition: all 1s ease-in;
+}
+
+/* Banner */
+
+.banner {
+	width: 100%; 
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url('../images/1.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.banner img {
+	width: 80px;
+	margin-top: 20px;
+}
+
+
+/* About */
+
+.about {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: var(--spacer-2x);
+	color: #fff;
+	background: #5f8086;
+	padding: var(--spacer-2x);
+}
+
+.columns {
+	columns: 2;
+	column-gap: var(--spacer-2x);
+}
+
+
+/* Travel */
+
+.travel {
+	padding: var(--spacer-2x)
+}
+
+.travel h2 {
+	text-align: center;
+	margin-bottom: var(--spacer-2x);
+}
+
+
+.travel .grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: var(--spacer-2x);
+}
+
+.travel .grid article {
+	text-align: center;
+}
+
+/* Contacts */
+
+.contacts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background: #5f8086;
+	color: #fff;
+}
+
+
+.contacts > div:first-of-type{
+	padding: var(--spacer-2x);
+}
+
+.contacts a {
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+
+iframe {
+	width: 100%;
+	height: 100%;
+	filter: grayscale(100%);
+}
